@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './categoriesScreen.dart';
 
 void main()
 {
@@ -11,20 +12,26 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:
-        MyHomePage(),
+      theme: ThemeData(
+        primarySwatch: Colors.pink,
+        canvasColor: Color.fromRGBO(189, 189, 189, 0.7),
+        fontFamily: 'Raleway',
+        textTheme: ThemeData.light().textTheme.copyWith(
+          bodyLarge: TextStyle(
+            color: Color.fromRGBO(49, 49, 49, 1)
+          ),
+          bodyMedium: TextStyle(
+            color: Color.fromRGBO(49, 49, 49, 1)
+          ),
+          titleMedium: TextStyle(
+            fontSize: 24,
+            fontFamily: 'RobotoCondensed'
+          )
+        )
+      ),
+      home: CategoriesScreen(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text('Hello World.'),
-    );
-  }
-}
 
