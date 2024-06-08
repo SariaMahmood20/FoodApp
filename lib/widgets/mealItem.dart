@@ -64,7 +64,7 @@ class MealItem extends StatelessWidget {
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
           elevation: 4,
-          margin: EdgeInsets.all(10),
+          margin: const EdgeInsets.all(10),
           child: Column(
             children: <Widget>[
               Stack(
@@ -82,12 +82,12 @@ class MealItem extends StatelessWidget {
                     child: Container(
                       width: 300,
                       color: Colors.black54,
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                         vertical: 5,
                         horizontal: 20,
                       ),
                       child: Text(title,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 20,
                         color: Colors.white
                       ),
@@ -106,22 +106,22 @@ class MealItem extends StatelessWidget {
                   children: [
                     Row(
                       children: <Widget>[
-                        Icon(Icons.schedule_sharp),
-                        SizedBox(width: 8,),
+                        const Icon(Icons.schedule_sharp),
+                        const SizedBox(width: 8,),
                         Text(duration.toString()+'min'),
                       ],
                     ),
                     Row(
                       children: <Widget>[
-                        Icon(Icons.work_history),
-                        SizedBox(width: 8,),
+                        const Icon(Icons.work_history),
+                        const SizedBox(width: 8,),
                         Text(complexityText),
                       ],
                     ),
                     Row(
                       children: <Widget>[
-                        Icon(Icons.attach_money),
-                        SizedBox(width: 8,),
+                        const Icon(Icons.attach_money),
+                        const SizedBox(width: 8,),
                         Text(affordabilityText),
                       ],
                     ),
