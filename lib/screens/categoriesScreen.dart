@@ -8,7 +8,6 @@ class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: GridView(
         padding: EdgeInsets.all(25),
         children: DUMMY_CATEGORIES

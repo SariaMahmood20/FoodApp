@@ -1,10 +1,11 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:food_app/Models/meals.dart';
 import 'package:food_app/screens/mealDetailScreen.dart';
 
 class MealItem extends StatelessWidget {
-  MealItem(@required this.id ,@required this.title, @required this.affordability, @required this.complexity, @required this.duration, @required this.imageUrl,{super.key});
+  MealItem( @required this.id ,@required this.title, @required this.affordability, @required this.complexity, @required this.duration, @required this.imageUrl,{super.key});
 
   final String id;
   final String title;
@@ -12,6 +13,7 @@ class MealItem extends StatelessWidget {
   final int duration;
   final Complexity complexity;
   final Affordability affordability;
+
 
   String get complexityText
   {
@@ -51,7 +53,14 @@ class MealItem extends StatelessWidget {
 
   void selectMeal(BuildContext context)
   {
-    Navigator.of(context).pushNamed(MealDetailScreen.routeName, arguments: id);
+    Navigator.of(context).pushNamed(MealDetailScreen.routeName, arguments: id).then(
+        (result){
+          if(result!=null)
+            {
+
+            }
+        }
+    );
   }
 
 

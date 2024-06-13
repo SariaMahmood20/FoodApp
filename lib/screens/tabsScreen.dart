@@ -1,18 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/screens/categoriesScreen.dart';
 import 'package:food_app/screens/favoriteScreen.dart';
+import 'package:food_app/widgets/mainDrawer.dart';
+import '../Models/meals.dart';
 
 class TabScreen extends StatefulWidget {
-  const TabScreen({super.key});
+  const TabScreen(this.favoriteMeals,{super.key});
+
+  final List<Meal> favoriteMeals;
 
   @override
   State<TabScreen> createState() => _TabScreenState();
 }
 
 class _TabScreenState extends State<TabScreen> {
+
+
   @override
+
+
   Widget build(BuildContext context) {
     return DefaultTabController(
+
       length: 2,
       child: Scaffold(
         appBar: AppBar(
@@ -35,9 +44,9 @@ class _TabScreenState extends State<TabScreen> {
         ),
         body: TabBarView(children: <Widget>[
           CategoriesScreen(),
-          FavoriteScreen(),
+          FavoriteScreen(widget.favoriteMeals),
         ]),
-
+        drawer: MainDrawer(),
       ),
     );
   }
